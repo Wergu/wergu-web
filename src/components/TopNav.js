@@ -1,17 +1,42 @@
 import React, { useState, useEffect } from 'react';
 import { Menu,  Image } from 'semantic-ui-react';
 import logo from "../img/logo.png"
+import ReactDOM from 'react-dom'
+
+
 
 const TopNav = ({handleNavClick, references}) => {
 
    let [name,setName] = useState("accueil")
    let [showShadow, setShowShadow] = useState(false)
 
+  
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
     },[])
 
     let handleScroll = () => {
+        let accueilPos = ReactDOM.findDOMNode(references.accueil.current).getBoundingClientRect().top;
+        
+
+       
+        if(accueilPos> -518 ){
+            setName("accueil")
+
+        }
+        if(accueilPos<= -518 && accueilPos>-4009){
+            setName("nos_solutions")
+
+        }
+
+        if(accueilPos <=-4009 && accueilPos> -4587){
+            setName("la_team")
+
+        }
+
+        if(accueilPos <=-4587){
+            setName("nous_contacter")
+        }
         if(window.scrollY>20){
             setShowShadow(true)
         }else{

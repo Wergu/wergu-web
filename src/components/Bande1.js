@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Grid, Container, Image } from 'semantic-ui-react';
 import apple from '../img/apple.png';
 import play_store from '../img/play_store.png';
+import Animate from 'animate.css-react'
+import 'animate.css/animate.css'
 
 
 const Bande1 = ({ needStoreButtons = false, reversed, principalImage, text1, text2,references, name="accueil", mt= 100 }) => {
@@ -43,6 +45,13 @@ const Bande1 = ({ needStoreButtons = false, reversed, principalImage, text1, tex
 
     }
 
+    useState(() => {
+        window.addEventListener('scroll', ()=>{
+            
+        });
+
+    },[])
+
     let _renderStoreBtn = (title, img) => (
         <div style={styles.storeBtn} >
             <Grid.Column>
@@ -65,6 +74,18 @@ const Bande1 = ({ needStoreButtons = false, reversed, principalImage, text1, tex
     let otherGridProps = reversed ? { reversed: "computer" } : {}
     return (
         <>
+        <Animate
+    enter="bounceIn" // on Enter animation
+    leave="bounceOut" // on Leave animation
+    appear="fadeInRight" // on element Appear animation (onMount)
+    change="flipInX" // on element Change animation (onUpdate)
+    durationAppear={1000}
+    durationEnter={1000}
+    durationLeave={1000}
+    durationChange={1000}
+    animate={true} // turn off/on animation, true by default
+   // animateChangeIf={true|false|expression} // turn off/on Change only animation, true by default
+    >
         <div style={{paddingBottom: 60}}>
             <Container style={styles.container}>
 
@@ -73,7 +94,7 @@ const Bande1 = ({ needStoreButtons = false, reversed, principalImage, text1, tex
                         <Grid.Column computer={9}>
                             <p style={styles.title} ref={references && references[name]}>{text1}</p>
                             <p style={styles.description}>{text2}</p>
-                            {needStoreButtons && <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "80%" }}>
+                            {needStoreButtons && <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "95%" }}>
                                 {_renderStoreBtn("App Store", apple)}
                                 {_renderStoreBtn("Google Play", play_store)}
                             </div>}
@@ -89,6 +110,7 @@ const Bande1 = ({ needStoreButtons = false, reversed, principalImage, text1, tex
                 </Grid>
             </Container>
             </div>
+            </Animate>
         </>
     );
 };

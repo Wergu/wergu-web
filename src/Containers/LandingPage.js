@@ -10,6 +10,8 @@ import animateScrollTo from "animated-scroll-to"
 import WerguPharma from '../components/WerguPharma';
 import Team from '../components/Team';
 import Contact from '../components/Contact';
+import ReactDOM from 'react-dom'
+
 
 const LandingPage = () => {
     const accueil = useRef(null)
@@ -21,9 +23,12 @@ const LandingPage = () => {
 
 
     useEffect(() => {
-
+        window.addEventListener("scroll",() => {
+            
+        })
         //window.scrollTo({top: 5000, behavior: "smooth"})
     }, [])
+
 
     let styles = {
         sectionTitle: {
@@ -81,7 +86,7 @@ const LandingPage = () => {
             />
 
             <WerguPharma/>
-            <p style={styles.sectionTitle} ref={la_team}>La team</p>
+            <p style={styles.sectionTitle} id="ttt" ref={la_team}>La team</p>
             <Team/>
             <p style={styles.sectionTitle} ref={nous_contacter}>Contactez nous</p>
             <Contact/>
