@@ -38,7 +38,7 @@ const Bande1 = ({ needStoreButtons = false, reversed, principalImage, text1, tex
             marginTop: 10
         },
         container:{
-            marginTop: mt
+            marginTop: mt,
         }
 
     }
@@ -65,6 +65,7 @@ const Bande1 = ({ needStoreButtons = false, reversed, principalImage, text1, tex
     let otherGridProps = reversed ? { reversed: "computer" } : {}
     return (
         <>
+        <div style={{paddingBottom: 60}}>
             <Container style={styles.container}>
 
                 <Grid columns={2}  {...otherGridProps} >
@@ -87,7 +88,7 @@ const Bande1 = ({ needStoreButtons = false, reversed, principalImage, text1, tex
 
                 </Grid>
             </Container>
-
+            </div>
         </>
     );
 };

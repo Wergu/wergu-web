@@ -7,6 +7,9 @@ import img_mobile3 from "../img/img_mobile3.png"
 import img_mobile4 from "../img/img_mobile4.png"
 import { useEffect } from 'react';
 import animateScrollTo from "animated-scroll-to"
+import WerguPharma from '../components/WerguPharma';
+import Team from '../components/Team';
+import Contact from '../components/Contact';
 
 const LandingPage = () => {
     const accueil = useRef(null)
@@ -14,13 +17,13 @@ const LandingPage = () => {
     const la_team = useRef(null)
     const nous_contacter = useRef(null)
 
-    let   handleNavClick = name => animateScrollTo(name.current, {minDuration: 1500,verticalOffset: -120})
+    let handleNavClick = name => animateScrollTo(name.current, { minDuration: 1500, verticalOffset: -120 })
 
 
     useEffect(() => {
-        
+
         //window.scrollTo({top: 5000, behavior: "smooth"})
-    },[])
+    }, [])
 
     let styles = {
         sectionTitle: {
@@ -29,7 +32,8 @@ const LandingPage = () => {
             fontSize: 50,
             color: "#757575",
             textAlign: "center",
-            marginTop: 50
+            marginTop: 80,
+            
         }
     }
     return (
@@ -61,19 +65,27 @@ const LandingPage = () => {
                 reversed
                 principalImage={img_mobile2}
             />
-          
-            <Bande1
-                text1="Faites vous livrer vos médicaments chez vous !"
-                text2="Plus de problème de monnaie ou de déplacement. Photographiez votre ordonance à travers l’appli, nos pharmaciens partenaires et nos livreurs s’occupent du reste. Suivez en temps réel votre commande."
-                principalImage={img_mobile3}
-            />
+            <div style={{ backgroundColor: "#F5F5F5", padding: 10 }}>
+                <Bande1
+                    text1="Faites vous livrer vos médicaments chez vous !"
+                    text2="Plus de problème de monnaie ou de déplacement. Photographiez votre ordonance à travers l’appli, nos pharmaciens partenaires et nos livreurs s’occupent du reste. Suivez en temps réel votre commande."
+                    principalImage={img_mobile3}
+                />
+            </div>
 
             <Bande1
                 text1="Informez vous sur la disponibilité et le prix de vos médicaments !"
-                text2="Inutile de se déplacer pour se renseigner sur la disponibilité et le prix de vos médicamentts. Avec wergu, la réponse se trouveau bout de vos doigts."
+                text2="Inutile de vous déplacer pour vous renseigner sur la disponibilité et le prix de vos médicaments. Avec wergu, la réponse se trouveau bout de vos doigts."
                 principalImage={img_mobile4}
                 reversed
             />
+
+            <WerguPharma/>
+            <p style={styles.sectionTitle} ref={la_team}>La team</p>
+            <Team/>
+            <p style={styles.sectionTitle} ref={nous_contacter}>Contactez nous</p>
+            <Contact/>
+            
 
         </>
     );
