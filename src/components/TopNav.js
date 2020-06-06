@@ -80,7 +80,7 @@ const TopNav = ({handleNavClick, references}) => {
     return (
         <>
             <Menu secondary fixed="top" style={styles().menu}>
-                <Menu.Item as="p"
+                <Menu.Item as="div"
                         style={styles().logoMenu}
                         onClick={() => handleItem("accueil")}
                 

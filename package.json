@@ -7,7 +7,6 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "animate.css": "^4.1.0",
-    "animate.css-react": "^1.0.0",
     "animated-scroll-to": "^2.0.8",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
