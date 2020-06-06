@@ -80,7 +80,7 @@ const LandingPage = () => {
 
             <Bande1
                 text1="Informez vous sur la disponibilité et le prix de vos médicaments !"
-                text2="Inutile de vous déplacer pour vous renseigner sur la disponibilité et le prix de vos médicaments. Avec wergu, la réponse se trouveau bout de vos doigts."
+                text2="Inutile de vous déplacer pour vous renseigner sur la disponibilité et le prix de vos médicaments. Avec wergu, la réponse se trouve au bout de vos doigts."
                 principalImage={img_mobile4}
                 reversed
             />
