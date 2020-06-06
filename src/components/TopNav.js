@@ -65,6 +65,9 @@ const TopNav = ({handleNavClick, references}) => {
         menu:{
             backgroundColor: "white",
             boxShadow: showShadow ? "0px 4px 4px rgba(0, 0, 0, 0.25)": ""
+        },
+        logoMenu:{
+            cursor: "pointer"
         }
     }
    )
@@ -77,7 +80,11 @@ const TopNav = ({handleNavClick, references}) => {
     return (
         <>
             <Menu secondary fixed="top" style={styles().menu}>
-                <Menu.Item>
+                <Menu.Item as="p"
+                        style={styles().logoMenu}
+                        onClick={() => handleItem("accueil")}
+                
+                >
                     <Image src={logo} />
                     <p style={styles().logoText}>Wergu</p>
                 </Menu.Item>

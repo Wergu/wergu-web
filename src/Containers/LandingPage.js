@@ -5,12 +5,10 @@ import img_mobile1 from "../img/img_mobile1.png"
 import img_mobile2 from "../img/img_mobile2.png"
 import img_mobile3 from "../img/img_mobile3.png"
 import img_mobile4 from "../img/img_mobile4.png"
-import { useEffect } from 'react';
 import animateScrollTo from "animated-scroll-to"
 import WerguPharma from '../components/WerguPharma';
 import Team from '../components/Team';
 import Contact from '../components/Contact';
-import ReactDOM from 'react-dom'
 
 
 const LandingPage = () => {
@@ -22,12 +20,7 @@ const LandingPage = () => {
     let handleNavClick = name => animateScrollTo(name.current, { minDuration: 1500, verticalOffset: -120 })
 
 
-    useEffect(() => {
-        window.addEventListener("scroll",() => {
-            
-        })
-        //window.scrollTo({top: 5000, behavior: "smooth"})
-    }, [])
+
 
 
     let styles = {
