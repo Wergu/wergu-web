@@ -41,7 +41,7 @@ const Bande1 = ({ needStoreButtons = false, reversed, principalImage, text1, tex
                 <Grid columns={2}  {...otherGridProps} >
                     <Grid.Row >
                         <Grid.Column computer={9}>
-                            <p style={styles.title} className="animate__animated animate__bounce"  ref={references && references[name]}>{text1}</p>
+                            <h1 style={styles.title} className="animate__animated animate__bounce"  ref={references && references[name]}>{text1}</h1>
                             <p style={styles.description}>{text2}</p>
                             {needStoreButtons && <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "95%" }}>
                                 <StoreButton img={apple} title={"App Store"}/>
