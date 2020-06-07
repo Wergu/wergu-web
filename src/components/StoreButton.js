@@ -1,5 +1,6 @@
 import React from 'react';
-import { Grid, Image } from 'semantic-ui-react';
+import { Grid } from 'semantic-ui-react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const StoreButton = ({title, img}) => {
     let styles = {
@@ -11,8 +12,10 @@ const StoreButton = ({title, img}) => {
         },
         image2:{
             marginLeft: 20,
-            marginTop: 10
-        
+            marginTop: 10,        
+        },
+        image2Div: {
+            textAlign: "center"
         },
         storeBtnText: {
             color: "white",
@@ -27,7 +30,15 @@ const StoreButton = ({title, img}) => {
                 <Grid columns={2}>
                     <Grid.Row>
                         <Grid.Column computer={5}>
-                            <Image  src={img} style={styles.image2} centered />
+                            <div style={styles.image2Div}>
+                                <LazyLoadImage
+                                    alt={`img-${Date.now()}`}
+                                    src={img}
+                                effect="blur"
+                                style={styles.image2}
+                                />
+                            </div>
+                             
                         </Grid.Column>
                         <Grid.Column computer={11}>
                             <p style={styles.storeBtnText}>Télécharger sur{"\n"}<span style={{ ...styles.storeBtnText, fontWeight: "bold" }}>{title}</span></p>

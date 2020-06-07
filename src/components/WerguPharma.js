@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, Image } from 'semantic-ui-react';
+import { Container } from 'semantic-ui-react';
 import wergu_pharma from "../img/wergu_pharma.png"
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const WerguPharma = () => {
 
@@ -29,6 +30,9 @@ const WerguPharma = () => {
             fontSize: 35,
             textAlign: "center",
             color: "white"
+        },
+        imgDiv: {
+            textAlign: "center"
         }
       
     }
@@ -36,7 +40,14 @@ const WerguPharma = () => {
         <div style={styles.div1}>
         <Container style={styles.container} >
             <p style={styles.title}><span style={styles.span1}>Wergu-Pharma</span>, la solution adaptée aux pharmaciens</p>
-            <Image src={wergu_pharma} centered />
+            <div style={styles.imgDiv}> 
+            <LazyLoadImage
+                alt={`img-${Date.now()}`}
+                src={wergu_pharma}
+                effect="blur"
+            />
+            </div>
+            
             <p style={styles.description}>Wergu-Pharma est un système de livraison et de gestion de stock intelligent qui permet aux pharmacies partenaires de centraliser toutes leurs opérations de vente, d’avoir des statistiques sur leur vente mensuelle, de prévenir les ruptures de stock et de prédire les médicaments qui seront les plus en demande dans le futur grace à l’intelligence artificielle intégrée.</p>
         </Container>
         </div>
