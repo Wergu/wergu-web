@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Container, Image, Input, Icon, TextArea, Form, Button } from 'semantic-ui-react';
+import { Grid, Container, Form, Button } from 'semantic-ui-react';
 import Lottie from 'react-lottie'
 import contact_us from "../img/contact_us.json"
 
@@ -24,7 +24,7 @@ const Contact = () => {
 
                         <Form>
                             <Form.Group>
-                                <Form.Input  placeholder='Prénom et nom' width={8} size="huge" iconPosition="left" icon="user" />
+                                <Form.Input placeholder='Prénom et nom' width={8} size="huge" iconPosition="left" icon="user" />
                                 <Form.Input  placeholder='Email' width={8} size="huge" iconPosition="left" icon="at" />
                             </Form.Group>
                             <Form.Group>
@@ -33,7 +33,6 @@ const Contact = () => {
                             </Form.Group>
                             <Form.Group>
                                 <Form.TextArea placeholder="Quel est votre message ?" width={16} size="huge" />
-
                             </Form.Group>
                             <Form.Checkbox label='Recevoir les infos relatives aux nouveautés de Wergu'  />
                             <Button style={{backgroundColor: "#12A85C", color: "white"}} type='submit' size="large">Envoyer</Button>

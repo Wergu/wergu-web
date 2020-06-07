@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Grid, Container, Image } from 'semantic-ui-react';
 import apple from '../img/apple.png';
 import play_store from '../img/play_store.png';
