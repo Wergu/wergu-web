@@ -1,5 +1,6 @@
 import React from 'react';
-import { Grid, Image } from 'semantic-ui-react';
+import { Grid } from 'semantic-ui-react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Member = ({image, name, status}) => {
     let styles ={
@@ -13,12 +14,20 @@ const Member = ({image, name, status}) => {
             fontSize: 30,
             //textAlign: "center"
             color: "#757575"
+        },
+        img:{
+            textAlign: "center"
         }
     }
     return (
         <Grid.Column>
-            
-            <Image src={image} centered/>
+            <div style={styles.img}>
+            <LazyLoadImage
+                src={image}
+                alt={`img-${Date.now()}`}
+                effect="blur"
+            />
+            </div>
             <p style={styles.name}>{name}
             
             <span style={styles.status}> <br/> {status}</span>

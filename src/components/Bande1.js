@@ -1,8 +1,9 @@
 import React from 'react';
-import { Grid, Container, Image } from 'semantic-ui-react';
+import { Grid, Container } from 'semantic-ui-react';
 import apple from '../img/apple.png';
 import play_store from '../img/play_store.png';
 import StoreButton from './StoreButton';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 
 const Bande1 = ({ needStoreButtons = false, reversed, principalImage, text1, text2,references, name="accueil", mt= 100 }) => {
@@ -50,7 +51,11 @@ const Bande1 = ({ needStoreButtons = false, reversed, principalImage, text1, tex
                         </Grid.Column>
                         <Grid.Column computer={7}>
                             <div style={styles.image1}>
-                                <Image src={principalImage} />
+                            <LazyLoadImage
+                                alt={`img-${Date.now()}`}
+                                src={principalImage}
+                               effect="blur"
+                               />
                             </div>
 
                         </Grid.Column>
