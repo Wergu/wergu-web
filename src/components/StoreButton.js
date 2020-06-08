@@ -10,17 +10,17 @@ const StoreButton = ({title, img}) => {
             backgroundColor: "#000000",
             borderRadius: 10
         },
-        image2:{
+        image:{
             marginLeft: 20,
-            marginTop: 10,        
+            //marginTop: 10,        
         },
-        image2Div: {
+        imageDiv: {
             textAlign: "center"
         },
         storeBtnText: {
             color: "white",
             fontSize: 20,
-            marginTop: 10
+            //marginTop: 10
 
         },
     }
@@ -30,12 +30,12 @@ const StoreButton = ({title, img}) => {
                 <Grid columns={2}>
                     <Grid.Row>
                         <Grid.Column computer={5}>
-                            <div style={styles.image2Div}>
+                            <div style={styles.imageDiv}>
                                 <LazyLoadImage
                                     alt={`img-${Date.now()}`}
                                     src={img}
                                 effect="blur"
-                                style={styles.image2}
+                                style={styles.image}
                                 />
                             </div>
                              

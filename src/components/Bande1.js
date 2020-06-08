@@ -1,9 +1,7 @@
 import React from 'react';
 import { Grid, Container } from 'semantic-ui-react';
-import apple from '../img/apple.png';
-import play_store from '../img/play_store.png';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import StoreButton from './StoreButton';
+import StoreButtonList from './StoreButtonList';
 
 
 const Bande1 = ({ needStoreButtons = false, reversed, principalImage, text1, text2,references, name="accueil", mt= 100 }) => {
@@ -44,10 +42,7 @@ const Bande1 = ({ needStoreButtons = false, reversed, principalImage, text1, tex
                         <Grid.Column computer={9}>
                             <h1 style={styles.title} className="animate__animated animate__bounce"  ref={references && references[name]}>{text1}</h1>
                             <p style={styles.description}>{text2}</p>
-                            {needStoreButtons && <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "95%" }}>
-                                <StoreButton img={apple} title={"App Store"}/>
-                                <StoreButton img={play_store} title={"Google Play"}/>
-                            </div>}
+                            {needStoreButtons && <StoreButtonList/>}
                         </Grid.Column>
                         <Grid.Column computer={7}>
                             <div style={styles.image1}>

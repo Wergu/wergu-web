@@ -10,6 +10,8 @@ import Bande1 from '../components/Bande1';
 import WerguPharma from '../components/WerguPharma';
 import Team from '../components/Team';
 import Contact from '../components/Contact';
+import DownloadIt from '../components/DownloadIt';
+import Footer from '../components/Footer';
 
 
 const LandingPage = () => {
@@ -84,7 +86,8 @@ const LandingPage = () => {
             <Team/>
             <p style={styles.sectionTitle} ref={nous_contacter}>Contactez nous</p>
             <Contact/>
-            
+            <DownloadIt/>
+            <Footer/>
 
         </>
     );

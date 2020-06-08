@@ -12,6 +12,20 @@ const Contact = () => {
         preserveAspectRatio: 'xMidYMid slice'
       }
     };
+
+    const styles={
+        rsText: {
+            fontSize: 35,
+            fontFamily: "Lato",
+            color: "#757575"
+        },
+        rsDiv:{
+            display: "flex", 
+            justifyContent: "space-around", 
+            marginTop: -10 
+        }
+    }
+
     return (
 
         <Container>
@@ -21,7 +35,8 @@ const Contact = () => {
                     <Lottie options={defaultOptions} />
                     </Grid.Column>
                     <Grid.Column  >
-
+                        <Grid.Row columns={1}>
+                        <Grid.Column>
                         <Form>
                             <Form.Group>
                                 <Form.Input placeholder='Prénom et nom' width={8} size="huge" iconPosition="left" icon="user" />
@@ -37,7 +52,22 @@ const Contact = () => {
                             <Form.Checkbox label='Recevoir les infos relatives aux nouveautés de Wergu'  />
                             <Button style={{backgroundColor: "#12A85C", color: "white"}} type='submit' size="large">Envoyer</Button>
                         </Form>
+                        </Grid.Column>
+                        <Grid.Column>
+                            <p style={styles.rsText}>Retrouvez nous aussi sur les réseaux sociaux</p>
+                            <div style={styles.rsDiv}>
+                        
 
+                            <Button circular icon='facebook' size="big" />
+                           
+                            <Button circular icon='twitter' size="big" />
+
+                            <Button circular icon='linkedin' size="big" />
+                            <Button circular icon='instagram' size="big" />
+                            
+                            </div>
+                        </Grid.Column>
+                        </Grid.Row>
                        
                     </Grid.Column>
                 </Grid.Row>
