@@ -79,8 +79,6 @@ const TopNav = ({ handleNavClick, references }) => {
                 >
                     <Image
                 src={logo}
-                alt={`img-${Date.now()}`}
-                effect="blur"
             />
                     
                     <p style={styles().logoText}>Wergu</p>

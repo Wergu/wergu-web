@@ -32,9 +32,7 @@ const StoreButton = ({title, img}) => {
                         <Grid.Column computer={5}>
                             <div style={styles.imageDiv}>
                                 <Image
-                                    alt={`img-${Date.now()}`}
                                     src={img}
-                                effect="blur"
                                 style={styles.image}
                                 />
                             </div>

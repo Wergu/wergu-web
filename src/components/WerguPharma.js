@@ -42,9 +42,8 @@ const WerguPharma = () => {
             <p style={styles.title}><span style={styles.span1}>Wergu-Pharma</span>, la solution adaptée aux pharmaciens</p>
             <div style={styles.imgDiv}> 
             <Image
-                alt={`img-${Date.now()}`}
                 src={wergu_pharma}
-                effect="blur"
+                centered
             />
             </div>
             

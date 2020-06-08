@@ -24,8 +24,7 @@ const Member = ({image, name, status}) => {
             <div style={styles.img}>
             <Image
                 src={image}
-                alt={`img-${Date.now()}`}
-                effect="blur"
+                centered
             />
             </div>
             <p style={styles.name}>{name}

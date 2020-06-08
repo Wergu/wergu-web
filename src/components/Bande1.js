@@ -47,9 +47,7 @@ const Bande1 = ({ needStoreButtons = false, reversed, principalImage, text1, tex
                         <Grid.Column computer={7}>
                             <div style={styles.image1}>
                             <Image
-                                alt={`img-${Date.now()}`}
                                 src={principalImage}
-                               effect="blur"
                                />
                             </div>
 
