@@ -1,6 +1,6 @@
 import React from 'react';
-import { Grid } from 'semantic-ui-react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { Grid, Image } from 'semantic-ui-react';
+
 
 const StoreButton = ({title, img}) => {
     let styles = {
@@ -31,7 +31,7 @@ const StoreButton = ({title, img}) => {
                     <Grid.Row>
                         <Grid.Column computer={5}>
                             <div style={styles.imageDiv}>
-                                <LazyLoadImage
+                                <Image
                                     alt={`img-${Date.now()}`}
                                     src={img}
                                 effect="blur"

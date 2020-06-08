@@ -1,6 +1,6 @@
 import React from 'react';
-import { Grid } from 'semantic-ui-react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { Grid, Image } from 'semantic-ui-react';
+
 
 const Member = ({image, name, status}) => {
     let styles ={
@@ -22,7 +22,7 @@ const Member = ({image, name, status}) => {
     return (
         <Grid.Column>
             <div style={styles.img}>
-            <LazyLoadImage
+            <Image
                 src={image}
                 alt={`img-${Date.now()}`}
                 effect="blur"

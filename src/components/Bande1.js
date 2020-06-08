@@ -1,6 +1,6 @@
 import React from 'react';
-import { Grid, Container } from 'semantic-ui-react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { Grid, Container, Image } from 'semantic-ui-react';
+
 import StoreButtonList from './StoreButtonList';
 
 
@@ -46,7 +46,7 @@ const Bande1 = ({ needStoreButtons = false, reversed, principalImage, text1, tex
                         </Grid.Column>
                         <Grid.Column computer={7}>
                             <div style={styles.image1}>
-                            <LazyLoadImage
+                            <Image
                                 alt={`img-${Date.now()}`}
                                 src={principalImage}
                                effect="blur"

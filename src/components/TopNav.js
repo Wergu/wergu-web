@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Menu } from 'semantic-ui-react';
+import { Menu, Image } from 'semantic-ui-react';
 import logo from "../img/logo.png"
 import ReactDOM from 'react-dom'
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 
 
 const TopNav = ({ handleNavClick, references }) => {
@@ -77,7 +77,7 @@ const TopNav = ({ handleNavClick, references }) => {
                     onClick={() => handleItem("accueil")}
 
                 >
-                    <LazyLoadImage
+                    <Image
                 src={logo}
                 alt={`img-${Date.now()}`}
                 effect="blur"
