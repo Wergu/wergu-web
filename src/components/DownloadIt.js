@@ -21,7 +21,7 @@ const DownloadIt = () => {
             fontFamily: "Lato",
             fontWeight: "bold",
             color: "white",
-            fontSize: 25,
+            fontSize: 50,
             marginTop: 30
         },
         mobileText: {
