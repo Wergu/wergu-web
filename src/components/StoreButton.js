@@ -8,7 +8,7 @@ const StoreButton = ({title, img}) => {
             width: 232,
             height: 76,
             backgroundColor: "#000000",
-            borderRadius: 10
+            borderRadius: 10,
         },
         image:{
             marginLeft: 20,
@@ -25,6 +25,8 @@ const StoreButton = ({title, img}) => {
         },
     }
     return (
+        <>
+        <div>
         <div style={styles.storeBtn} >
             <Grid.Column>
                 <Grid columns={2}>
@@ -46,6 +48,8 @@ const StoreButton = ({title, img}) => {
             </Grid.Column>
 
         </div>
+        </div>
+        </>
     )
 };
 

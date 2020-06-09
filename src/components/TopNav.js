@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Menu, Image } from 'semantic-ui-react';
+import { Menu, Image, Responsive } from 'semantic-ui-react';
 import logo from "../img/logo.png"
 import ReactDOM from 'react-dom'
 
@@ -11,19 +11,21 @@ const TopNav = ({ handleNavClick, references }) => {
     let [showShadow, setShowShadow] = useState(false)
 
     let handleScroll = useCallback(() => {
-        let accueilPos = ReactDOM.findDOMNode(references.accueil.current).getBoundingClientRect().top;
+        if (references.accueil.current) {
+            let accueilPos = ReactDOM.findDOMNode(references.accueil.current).getBoundingClientRect().top;
 
-        if (accueilPos > -518) {
-            setName("accueil")
-        }
-        if (accueilPos <= -518 && accueilPos > -4009) {
-            setName("nos_solutions")
-        }
-        if (accueilPos <= -4009 && accueilPos > -4587) {
-            setName("la_team")
-        }
-        if (accueilPos <= -4587) {
-            setName("nous_contacter")
+            if (accueilPos > -518) {
+                setName("accueil")
+            }
+            if (accueilPos <= -518 && accueilPos > -4009) {
+                setName("nos_solutions")
+            }
+            if (accueilPos <= -4009 && accueilPos > -4587) {
+                setName("la_team")
+            }
+            if (accueilPos <= -4587) {
+                setName("nous_contacter")
+            }
         }
 
         if (window.scrollY > 20) {
@@ -32,7 +34,7 @@ const TopNav = ({ handleNavClick, references }) => {
             setShowShadow(false)
 
         }
-    },[references])
+    }, [references])
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -75,54 +77,39 @@ const TopNav = ({ handleNavClick, references }) => {
                 <Menu.Item as="div"
                     style={styles().logoMenu}
                     onClick={() => handleItem("accueil")}
-
                 >
                     <Image
-                src={logo}
-            />
-                    
+                        src={logo}
+                    />
                     <p style={styles().logoText}>Wergu</p>
                 </Menu.Item>
 
                 <Menu.Menu position='right'>
+                   
+                   <Responsive minWidth="600">
                     <Menu.Item as="p"
                         name='Accueil'
                         onClick={() => handleItem("accueil")}
-                        //   active={activeItem === 'home'}
                         style={styles("accueil").menuItem}
-
-
                     />
-
-
                     <Menu.Item as="p"
                         name='Nos solutions'
-                        //   active={activeItem === 'messages'}
                         onClick={() => handleItem("nos_solutions")}
                         style={styles("nos_solutions").menuItem}
-
-
-
-
-
                     />
                     <Menu.Item as="p"
                         name='La team'
-                        //   active={activeItem === 'friends'}
                         onClick={() => handleItem("la_team")}
                         style={styles("la_team").menuItem}
 
                     />
-                    {/* <Menu.Item>
-            <Input icon='search' placeholder='Search...' />
-          </Menu.Item> */}
+
                     <Menu.Item as="p"
                         name='Nous contacter'
-                        // active={activeItem === 'logout'}
-                        //onClick={this.handleItemClick}
                         onClick={() => handleItem("nous_contacter")}
                         style={styles("nous_contacter").menuItem}
                     />
+                    </Responsive>
                 </Menu.Menu>
             </Menu>
         </>

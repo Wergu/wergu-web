@@ -83,10 +83,10 @@ const LandingPage = () => {
 
             <WerguPharma/>
             <p style={styles.sectionTitle} id="ttt" ref={la_team}>La team</p>
-            <Team/>
+            {/* <Team/> */}
             <p style={styles.sectionTitle} ref={nous_contacter}>Contactez nous</p>
-            <Contact/>
-            <DownloadIt/>
+            {/* <Contact/> */}
+            {/* <DownloadIt/> */}
             <Footer/>
 
         </>
