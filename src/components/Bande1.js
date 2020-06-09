@@ -45,7 +45,7 @@ const Bande1 = ({ needStoreButtons = false, reversed, principalImage, text1, tex
     let otherGridProps = reversed ? { reversed: "computer" } : {}
     return (
         <>
-            <Responsive maxWidth={599.9999999}>
+            <Responsive maxWidth={991.9999999}>
                 <div style={{ marginTop: needStoreButtons ?120 :50 }}>
                     <Container>
                         <h1 style={styles.mobileTitle} ref={references && references[name]}>{text1}</h1>
@@ -53,6 +53,7 @@ const Bande1 = ({ needStoreButtons = false, reversed, principalImage, text1, tex
 
                         <Image
                             src={principalImage}
+                            centered
                         />
                      {needStoreButtons && <StoreButtonList />}
 
@@ -61,7 +62,7 @@ const Bande1 = ({ needStoreButtons = false, reversed, principalImage, text1, tex
 
             </Responsive>
 
-            <Responsive as="div" minWidth={600}>
+            <Responsive as="div" minWidth={992}>
                 <div style={{ paddingBottom: 60 }}>
                     <Container style={styles.container}>
 

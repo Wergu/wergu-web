@@ -43,7 +43,7 @@ const DownloadIt = () => {
 
     return (
         <>
-        <Responsive maxWidth={599.9999}>
+        <Responsive maxWidth={991.9999}>
         <div style={styles.mobileContainer}>
            
             <Grid.Row  >
@@ -60,7 +60,7 @@ const DownloadIt = () => {
         </div>
         </Responsive>
 
-        <Responsive minWidth={600}>
+        <Responsive minWidth={992}>
         <div style={styles.container}>
             <Grid columns={2} centered >
             <Grid.Row  >

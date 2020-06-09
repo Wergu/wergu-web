@@ -59,11 +59,11 @@ const Contact = () => {
                         <Grid.Column mobile={16}>
                             <p style={styles.rsText}>Retrouvez nous aussi sur les réseaux sociaux</p>
                             <div style={styles.rsDiv}>
-                        
 
-                            <Button circular icon='facebook' size="big" />
-                           
-                            <Button circular icon='twitter' size="big" />
+                                <Button circular icon='facebook' size="big"/>
+                                <a href="https://twitter.com/wergumobile">
+                                <Button circular icon='twitter' size="big" />
+                                </a>
 
                             <Button circular icon='linkedin' size="big" />
                             <Button circular icon='instagram' size="big" />

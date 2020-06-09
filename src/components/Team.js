@@ -9,14 +9,14 @@ const Team = () => {
     return (
 
         <>
-        <Responsive maxWidth={599.9999}>
+        <Responsive maxWidth={991.9999}>
                 <Grid.Row>
                         <Member image={cheikh} name="Cheikh Seck" status="CEO" />
                         <Member image={aita} name={"Aïta Ndir Dia"} status="CMO"/>
                         <Member image={docko} name="Docko Sow" status="CTO" />
                 </Grid.Row>
         </Responsive>
-        <Responsive minWidth={600}>
+        <Responsive minWidth={992}>
         <Container>
             <Grid columns={3}>
                 <Grid.Row>

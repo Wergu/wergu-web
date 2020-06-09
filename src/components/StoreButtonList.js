@@ -7,7 +7,7 @@ import { Grid, Responsive } from 'semantic-ui-react';
 const StoreButtonList = () => {
     return (
         <>
-        <Responsive maxWidth={599.99999}>
+        <Responsive maxWidth={991.99999}>
             <Grid columns={1} >
                 <Grid.Row>
                 
@@ -26,7 +26,7 @@ const StoreButtonList = () => {
                 </Grid.Row>
             </Grid>
         </Responsive>
-        <Responsive minWidth={600}>
+        <Responsive minWidth={992}>
         <Grid columns={2} >
             <Grid.Row>
             <Grid.Column >

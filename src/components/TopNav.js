@@ -92,7 +92,7 @@ const TopNav = ({ handleNavClick, references, collapse }) => {
 
                 <Menu.Menu position='right'>
                    
-                   <Responsive minWidth="600" as={Menu.Item}>
+                   <Responsive minWidth={992} as={Menu.Item}>
                     <Menu.Item as="p"
                         name='Accueil'
                         onClick={() => handleItem("accueil")}
@@ -116,7 +116,7 @@ const TopNav = ({ handleNavClick, references, collapse }) => {
                         style={styles("nous_contacter").menuItem}
                     />
                     </Responsive>   
-                    <Responsive maxWidth={599.99999}>
+                    <Responsive maxWidth={991.99999}>
                     <Menu.Item as='p' onClick={collapse}><Icon name="bars" size="big" style={styles().collapseBtn}  /></Menu.Item>
 
                     </Responsive>

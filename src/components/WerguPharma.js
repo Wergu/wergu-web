@@ -55,7 +55,7 @@ const WerguPharma = () => {
     return (
 
         <>
-        <Responsive maxWidth={599.9999}>
+        <Responsive maxWidth={991.9999}>
         <div style={styles.div1}>
         <Container style={styles.container} >
             <p style={styles.mobileTitle}><span style={styles.mobileSpan1}>Wergu-Pharma</span>, la solution adaptée aux pharmaciens</p>
@@ -72,7 +72,7 @@ const WerguPharma = () => {
 
         </Responsive>
 
-        <Responsive minWidth={600}>
+        <Responsive minWidth={992}>
         <div style={styles.div1}>
         <Container style={styles.container} >
             <p style={styles.title}><span style={styles.span1}>Wergu-Pharma</span>, la solution adaptée aux pharmaciens</p>
