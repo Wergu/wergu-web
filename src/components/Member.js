@@ -16,7 +16,8 @@ const Member = ({image, name, status}) => {
             color: "#757575"
         },
         img:{
-            textAlign: "center"
+            textAlign: "center", 
+            marginTop: 50
         }
     }
     return (

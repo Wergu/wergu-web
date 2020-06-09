@@ -46,7 +46,7 @@ const Bande1 = ({ needStoreButtons = false, reversed, principalImage, text1, tex
     return (
         <>
             <Responsive maxWidth={599.9999999}>
-                <div style={{ marginTop: 120 }}>
+                <div style={{ marginTop: needStoreButtons ?120 :50 }}>
                     <Container>
                         <h1 style={styles.mobileTitle} ref={references && references[name]}>{text1}</h1>
                         <p style={styles.mobileDescription}>{text2}</p>
