@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Sidebar, Menu, Grid, Icon } from 'semantic-ui-react';
-import LeftNavitem from './LeftNavitem';
-import { leftNav } from './LeftNavData';
 
 
 
