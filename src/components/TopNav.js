@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Menu, Image, Responsive } from 'semantic-ui-react';
+import { Menu, Image, Responsive, Icon } from 'semantic-ui-react';
 import logo from "../img/logo.png"
 import ReactDOM from 'react-dom'
 
 
 
-const TopNav = ({ handleNavClick, references }) => {
+const TopNav = ({ handleNavClick, references, collapse }) => {
 
     let [name, setName] = useState("accueil")
     let [showShadow, setShowShadow] = useState(false)
@@ -62,6 +62,10 @@ const TopNav = ({ handleNavClick, references }) => {
             },
             logoMenu: {
                 cursor: "pointer"
+            },
+            collapseBtn:{
+                marginTop: 25,
+                color: "#757575"
             }
         }
     )
@@ -70,6 +74,8 @@ const TopNav = ({ handleNavClick, references }) => {
         setName(myName)
         handleNavClick(references[myName])
     }
+
+
 
     return (
         <>
@@ -86,7 +92,7 @@ const TopNav = ({ handleNavClick, references }) => {
 
                 <Menu.Menu position='right'>
                    
-                   <Responsive minWidth="600">
+                   <Responsive minWidth="600" as={Menu.Item}>
                     <Menu.Item as="p"
                         name='Accueil'
                         onClick={() => handleItem("accueil")}
@@ -109,7 +115,13 @@ const TopNav = ({ handleNavClick, references }) => {
                         onClick={() => handleItem("nous_contacter")}
                         style={styles("nous_contacter").menuItem}
                     />
+                    </Responsive>   
+                    <Responsive maxWidth={599.99999}>
+                    <Menu.Item as='p' onClick={collapse}><Icon name="bars" size="big" style={styles().collapseBtn}  /></Menu.Item>
+
                     </Responsive>
+
+
                 </Menu.Menu>
             </Menu>
         </>

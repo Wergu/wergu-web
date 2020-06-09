@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import img_mobile1 from "../img/img_mobile1.png"
 import img_mobile2 from "../img/img_mobile2.png"
 import img_mobile3 from "../img/img_mobile3.png"
@@ -12,6 +12,7 @@ import Team from '../components/Team';
 import Contact from '../components/Contact';
 import DownloadIt from '../components/DownloadIt';
 import Footer from '../components/Footer';
+import LeftNav from '../components/LeftNav';
 
 
 const LandingPage = () => {
@@ -22,9 +23,11 @@ const LandingPage = () => {
 
     let handleNavClick = name => animateScrollTo(name.current, { minDuration: 1500, verticalOffset: -120 })
 
+    let [visible,setVisible] = useState(false)
 
-
-
+    let collapse= () => {
+        setVisible(prevState => !prevState )
+    }
 
     let styles = {
         sectionTitle: {
@@ -39,6 +42,16 @@ const LandingPage = () => {
     }
     return (
         <>
+             <LeftNav 
+             handleNavClick={handleNavClick}
+             references={{
+                 accueil,
+                 nos_solutions,
+                 la_team,
+                 nous_contacter
+             }}
+             visible={visible} 
+             collapse={collapse}/>
 
             <TopNav
                 handleNavClick={handleNavClick}
@@ -48,7 +61,9 @@ const LandingPage = () => {
                     la_team,
                     nous_contacter
                 }}
+                collapse={collapse}
             />
+
             <Bande1
                 mt={150}
                 references={{

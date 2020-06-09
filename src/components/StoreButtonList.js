@@ -9,10 +9,10 @@ const StoreButtonList = () => {
         <>
         <Responsive maxWidth={599.99999}>
             <Grid columns={1} >
-                <Grid.Row style={{backgroundColor: "green"}}>
+                <Grid.Row>
                 
                 <Grid.Column>
-                    <div style={{display: "flex", justifyContent: "center", marginTop: 50, backgroundColor: "red"}}>
+                    <div style={{display: "flex", justifyContent: "center", marginTop: 50}}>
                     <StoreButton img={apple} title={"App Store"} />
 
                     </div>
