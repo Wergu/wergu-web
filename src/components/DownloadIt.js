@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid } from 'semantic-ui-react';
+import { Grid, Responsive } from 'semantic-ui-react';
 import StoreButtonList from './StoreButtonList';
 
 
@@ -11,20 +11,56 @@ const DownloadIt = () => {
             height:260,
             backgroundColor: "#12A85C"
         },
+        mobileContainer:{
+            width: "100%",
+            backgroundColor: "#12A85C",
+            marginTop: 20,
+            padding: 20
+        }, 
         text:{
             fontFamily: "Lato",
             fontWeight: "bold",
             color: "white",
-            fontSize: 50,
+            fontSize: 25,
             marginTop: 30
+        },
+        mobileText: {
+            fontFamily: "Lato",
+            fontWeight: "bold",
+            color: "white",
+            fontSize: 25,
+            textAlign: "center"
         },
         storeBtnList:{
             marginTop: 80
 
-        }
+        },
+        mobileStoreBtnList:{
+            marginTop: 10
+
+        },
     }
 
     return (
+        <>
+        <Responsive maxWidth={599.9999}>
+        <div style={styles.mobileContainer}>
+           
+            <Grid.Row  >
+                <Grid.Column  >
+                    <p style={styles.mobileText}>Qu'attendez vous pour télécharger Wergu ?</p>
+                </Grid.Column>
+                <Grid.Column >
+                    <div style={styles.mobileStoreBtnList}>
+                    <StoreButtonList/>
+                    </div>
+                </Grid.Column>
+            </Grid.Row>
+
+        </div>
+        </Responsive>
+
+        <Responsive minWidth={600}>
         <div style={styles.container}>
             <Grid columns={2} centered >
             <Grid.Row  >
@@ -39,6 +75,8 @@ const DownloadIt = () => {
             </Grid.Row>
             </Grid>
         </div>
+        </Responsive>
+        </>
     );
 };
 

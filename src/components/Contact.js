@@ -23,6 +23,9 @@ const Contact = () => {
             display: "flex", 
             justifyContent: "space-around", 
             marginTop: -10 
+        },
+        input:{
+            marginTop: 10
         }
     }
 
@@ -31,29 +34,29 @@ const Contact = () => {
         <Container>
             <Grid columns={2}>
                 <Grid.Row >
-                    <Grid.Column>
+                    <Grid.Column tablet={8} mobile={16} computer={8} largeScreen={8}>
                     <Lottie options={defaultOptions} />
                     </Grid.Column>
-                    <Grid.Column  >
+                    <Grid.Column  tablet={8} mobile={16} computer={8} largeScreen={8}>
                         <Grid.Row columns={1}>
                         <Grid.Column>
                         <Form>
                             <Form.Group>
-                                <Form.Input placeholder='Prénom et nom' width={8} size="huge" iconPosition="left" icon="user" />
-                                <Form.Input  placeholder='Email' width={8} size="huge" iconPosition="left" icon="at" />
+                                <Form.Input style={styles.input} placeholder='Prénom et nom' width={8} size="huge" iconPosition="left" icon="user" />
+                                <Form.Input style={styles.input} placeholder='Email' width={8} size="huge" iconPosition="left" icon="at" />
                             </Form.Group>
-                            <Form.Group>
-                                <Form.Input  placeholder='Objet du message' width={16} size="huge" iconPosition="left" icon="envelope open outline" />
+                            <Form.Group >
+                                <Form.Input style={styles.input} placeholder='Objet du message' width={16} size="huge" iconPosition="left" icon="envelope open outline" />
 
                             </Form.Group>
                             <Form.Group>
-                                <Form.TextArea placeholder="Quel est votre message ?" width={16} size="huge" />
+                                <Form.TextArea style={styles.input} placeholder="Quel est votre message ?" width={16} size="huge" />
                             </Form.Group>
-                            <Form.Checkbox label='Recevoir les infos relatives aux nouveautés de Wergu'  />
-                            <Button style={{backgroundColor: "#12A85C", color: "white"}} type='submit' size="large">Envoyer</Button>
+                            <Form.Checkbox style={styles.input} label='Recevoir les infos relatives aux nouveautés de Wergu'  />
+                            <Button  style={{backgroundColor: "#12A85C", color: "white"}} type='submit' size="large">Envoyer</Button>
                         </Form>
                         </Grid.Column>
-                        <Grid.Column>
+                        <Grid.Column mobile={16}>
                             <p style={styles.rsText}>Retrouvez nous aussi sur les réseaux sociaux</p>
                             <div style={styles.rsDiv}>
                         
