@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Container, Form, Button } from 'semantic-ui-react';
+import { Grid, Container, Form, Button, Responsive } from 'semantic-ui-react';
 import Lottie from 'react-lottie'
 import contact_us from "../img/contact_us.json"
 
@@ -15,18 +15,28 @@ const Contact = () => {
 
     const styles={
         rsText: {
-            fontSize: 35,
+            fontSize: 25,
             fontFamily: "Lato",
-            color: "#757575"
+            color: "#757575",
         },
         rsDiv:{
             display: "flex", 
             justifyContent: "space-around", 
-            marginTop: -10 
+            marginTop: 20 
         },
         input:{
             marginTop: 10
+        },
+        mobileRsText:{
+            fontSize: 25,
+            fontFamily: "Lato",
+            color: "#757575",
+            textAlign: "center"
+        },
+        mobileBtnDiv:{
+            textAlign: "center"
         }
+        
     }
 
     return (
@@ -53,11 +63,25 @@ const Contact = () => {
                                 <Form.TextArea style={styles.input} placeholder="Quel est votre message ?" width={16} size="huge" />
                             </Form.Group>
                             <Form.Checkbox style={styles.input} label='Recevoir les infos relatives aux nouveautés de Wergu'  />
+                            <Responsive minWidth={992}>
                             <Button  style={{backgroundColor: "#12A85C", color: "white"}} type='submit' size="large">Envoyer</Button>
+                            </Responsive>
+
+                            <Responsive maxWidth={991.99999}>
+                            <div style={styles.mobileBtnDiv}>
+                                <Button  style={{backgroundColor: "#12A85C", color: "white"}} type='submit' size="large">Envoyer</Button>
+
+                            </div>
+                            </Responsive>
                         </Form>
                         </Grid.Column>
                         <Grid.Column mobile={16}>
+                            <Responsive minWidth={992}>
                             <p style={styles.rsText}>Retrouvez nous aussi sur les réseaux sociaux</p>
+                            </Responsive>
+                            <Responsive maxWidth={991.99999}>
+                            <p style={styles.mobileRsText}>Retrouvez nous aussi sur les réseaux sociaux</p>
+                            </Responsive>
                             <div style={styles.rsDiv}>
 
                                 <Button circular icon='facebook' size="big"/>
