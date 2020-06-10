@@ -57,7 +57,7 @@ const LeftNav = ({visible=false,collapse,handleNavClick, references}) => {
                 {/* <div style={{ width: "60%",padding: 5 }}>
                     <Grid.Row columns={1} > */}
                     
-                    <p style={{textAlign: "right",color: "#757575", marginTop: 30, marginRight: 20}}><Icon onClick={collapse} name="close" size="big" color="#757575"/></p>
+                    <p style={{textAlign: "right",color: "#757575", marginTop: 30, marginRight: 20}}><Icon onClick={collapse} name="close" size="big" /></p>
                     <Menu.Item as="p"
                         name='Accueil'
                         onClick={() => handleItem("accueil")}
@@ -76,7 +76,7 @@ const LeftNav = ({visible=false,collapse,handleNavClick, references}) => {
                     />
 
                     <Menu.Item as="p"
-                        name='Nous contacter'
+                        name='Contactez nous'
                         onClick={() => handleItem("nous_contacter")}
                         style={styles("nous_contacter").menuItem}
                     />

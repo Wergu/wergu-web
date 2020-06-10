@@ -2,13 +2,14 @@ import React from 'react';
 import { Grid, Image } from 'semantic-ui-react';
 
 
-const StoreButton = ({title, img}) => {
+const StoreButton = ({title, img,link}) => {
     let styles = {
         storeBtn: {
             width: 232,
             height: 76,
             backgroundColor: "#000000",
             borderRadius: 10,
+            cursor: "pointer"
         },
         image:{
             marginLeft: 20,
@@ -26,6 +27,7 @@ const StoreButton = ({title, img}) => {
     }
     return (
         <>
+        <a href={link} target="_blank">
         <div>
         <div style={styles.storeBtn} >
             <Grid.Column>
@@ -49,6 +51,7 @@ const StoreButton = ({title, img}) => {
 
         </div>
         </div>
+        </a>
         </>
     )
 };

@@ -111,7 +111,7 @@ const TopNav = ({ handleNavClick, references, collapse }) => {
                     />
 
                     <Menu.Item as="p"
-                        name='Nous contacter'
+                        name='Contactez nous'
                         onClick={() => handleItem("nous_contacter")}
                         style={styles("nous_contacter").menuItem}
                     />

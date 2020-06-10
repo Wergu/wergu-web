@@ -33,7 +33,10 @@ const StoreButtonList = () => {
                 <StoreButton img={apple} title={"App Store"} />
             </Grid.Column>
             <Grid.Column>
-                <StoreButton img={play_store} title={"Google Play"} />
+                <StoreButton 
+                link="https://play.google.com/store/apps/details?id=com.wergu&hl=fr" 
+                img={play_store} 
+                title={"Google Play"} />
             </Grid.Column>
             </Grid.Row>
         </Grid>

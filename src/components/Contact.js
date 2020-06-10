@@ -18,6 +18,7 @@ const Contact = () => {
             fontSize: 25,
             fontFamily: "Lato",
             color: "#757575",
+            marginTop:10
         },
         rsDiv:{
             display: "flex", 
@@ -85,7 +86,7 @@ const Contact = () => {
                             <div style={styles.rsDiv}>
 
                                 <Button circular icon='facebook' size="big"/>
-                                <a href="https://twitter.com/wergumobile">
+                                <a target="_blank" href="https://twitter.com/wergumobile">
                                 <Button circular icon='twitter' size="big" />
                                 </a>
 
