@@ -27,7 +27,7 @@ const StoreButton = ({title, img,link}) => {
     }
     return (
         <>
-        <a href={link} target="_blank">
+        <a href={link} target="_blank" rel="noopener noreferrer">
         <div>
         <div style={styles.storeBtn} >
             <Grid.Column>

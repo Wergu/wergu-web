@@ -86,7 +86,7 @@ const Contact = () => {
                             <div style={styles.rsDiv}>
 
                                 <Button circular icon='facebook' size="big"/>
-                                <a target="_blank" href="https://twitter.com/wergumobile">
+                                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/wergumobile">
                                 <Button circular icon='twitter' size="big" />
                                 </a>
 

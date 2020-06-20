@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Container, Image, Responsive, Segment } from 'semantic-ui-react';
+import { Grid, Container, Image, Responsive } from 'semantic-ui-react';
 
 import StoreButtonList from './StoreButtonList';
 
